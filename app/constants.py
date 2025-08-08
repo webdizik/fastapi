@@ -1,0 +1,1 @@
+SUCCESS_RESPOSNSE = {"status": "success"}
