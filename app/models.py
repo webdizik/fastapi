@@ -13,7 +13,7 @@ Session = async_sessionmaker(bind=engine, expire_on_commit=False)
 
 class Base(DeclarativeBase, AsyncAttrs):
     @property
-    def id(self):
+    def _id(self):
         return {"id": self.id}
 
 
@@ -63,5 +63,5 @@ async def close_orm():
     await engine.dispose()
 
 
-ORM_OBJ = Post
+ORM_OBJ = Post | Author
 ORM_CLS = type[Post]

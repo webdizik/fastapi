@@ -2,7 +2,7 @@ import requests
 
 
 response = requests.post(
-    "http://127.0.0.1:8000/api/v1/posts",
+    "http://127.0.0.1:8000/api/v1/advertisement",
     json={
         "title": "Куплю что-нибудь",
         "description": "Недорогое.",
@@ -13,19 +13,19 @@ response = requests.post(
 print(response.status_code)
 print(response.json())
 
-response = requests.get("http://127.0.0.1:8080/posts/1")
+response = requests.get("http://127.0.0.1:8080/advertisement/1")
 print(response.status_code)
 print(response.json())
 
-# response = await session.patch(
-#     "http://127.0.0.1:8080/posts/1",
+# response = requests.patch(
+#     "http://127.0.0.1:8080/advertisement/1",
 #     json={"title": "new_post_1"},
 # )
 # print(response.status)
-# print(await response.json())
+# print(response.json())
 
-# response = await session.delete(
-#     "http://127.0.0.1:8080/posts/1",
+# response = requests.delete(
+#     "http://127.0.0.1:8080/advertisement/1",
 # )
 # print(response.status)
-# print(await response.json())
+# print(response.json())

@@ -36,6 +36,7 @@ reference_solution
 
 *.code-workspace
 *.http
+qwe.txt
 
 ### OS specific ###
 .DS_Store

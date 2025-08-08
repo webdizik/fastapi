@@ -14,7 +14,6 @@ class CreatePostRequest(BaseModel):
     description: str | None
     id_authors: int
     price: int
-    creation_time: datetime.datetime
 
 
 class UpdatePostRequest(BaseModel):
@@ -41,7 +40,10 @@ class GetPostResponse(BaseModel):
 
 
 class SearchPostResponse(BaseModel):
-    results: list[GetPostResponse]
+    title: str | None
+    description: str | None
+    price: int | None
+    creation_time: datetime.datetime | None
 
 
 class DeletePostResponse(SuccessResponse):
