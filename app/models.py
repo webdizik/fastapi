@@ -13,7 +13,7 @@ Session = async_sessionmaker(bind=engine, expire_on_commit=False)
 
 class Base(DeclarativeBase, AsyncAttrs):
     @property
-    def _id(self):
+    def id_(self):
         return {"id": self.id}
 
 

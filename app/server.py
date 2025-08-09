@@ -30,7 +30,7 @@ async def create_post(post: CreatePostRequest, session: SessionDependency):
 
     await add_item(session, post_orm_obj)
 
-    return post_orm_obj._id
+    return post_orm_obj.id_
 
 
 @app.get("/api/v1/advertisement/{advertisement_id}", response_model=GetPostResponse,
